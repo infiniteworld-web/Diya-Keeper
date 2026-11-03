@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+
+    <title>Diya Keeper – a Diwali game</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="stage">
+        <canvas id="c" aria-label="Diya Keeper game"></canvas>
+
+        <div id="menu" class="screen on">
+          <p class="greet">शुभ दीपावली &middot; Happy Diwali</p>
+
+          <h1>Diya Keeper</h1>
+
+          <p>
+            The night wind is rising. Slide your diya side to side and keep its
+            flame alive.
+          </p>
+
+          <div class="legend">
+            <span
+              ><i class="dot" style="background: #ffc933"></i>Oil: refills the
+              flame</span
+            >
+
+            <span
+              ><i class="dot" style="background: #f59e0b"></i>Ladoo: big
+              points</span
+            >
+
+            <span
+              ><i class="dot" style="background: #ff7a00"></i>Marigold:
+              bonus</span
+            >
+
+            <span
+              ><i class="dot" style="background: #4fb3ff"></i>Water: dims
+              flame</span
+            >
+
+            <span
+              ><i class="dot" style="background: #e8316f"></i>Cracker: dodge
+              it</span
+            >
+          </div>
+
+          <button id="start">Light the diya</button>
+
+          <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.8">
+            Drag your finger, move the mouse, or use the arrow keys.
+          </p>
+        </div>
+
+        <div id="over" class="screen">
+          <p class="greet">Your flame went out</p>
+
+          <div class="big" id="finalScore">0</div>
+
+          <p id="bestLine">Best: 0</p>
+
+          <p id="rank" style="color: var(--marigold); font-weight: 600"></p>
+
+          <div>
+            <button id="again">Play again</button>
+
+            <button id="share" class="alt">Challenge a friend</button>
+          </div>
+        </div>
+
+        <button id="mute" aria-label="Toggle sound">Sound on</button>
+
+        <div id="toast"></div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
